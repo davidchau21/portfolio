@@ -5,39 +5,66 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.8rem 10rem;
-  
-  background-color: #21212150;
-  
-  backdrop-filter: blur(6px);
+  padding: 2rem 10rem;
+
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   z-index: 1000;
+  transition: var(--transition);
 
   nav{
     display: flex;
     align-items: center;
-    gap: 1.8rem;
+    gap: 2rem;
+
     a{
       color: #FFFF;
-      padding: 0.6rem;
+      padding: 0.8rem 1.2rem;
       font-family: 'Red Hat Display', sans-serif;
       font-weight: 500;
       text-transform: uppercase;
-      transition: filter 0.25s;
+      font-size: 1.4rem;
+      transition: var(--transition);
+      border-radius: var(--border-radius);
+      position: relative;
 
       &.button{
-        padding: 0.6rem 2rem;
+        padding: 0.8rem 2.5rem;
+        background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
+        box-shadow: var(--shadow);
       }
 
       &:hover{
-        filter: brightness(0.6);
+        color: var(--green);
+        transform: translateY(-2px);
+
+        &.button{
+          box-shadow: 0 10px 30px rgba(0, 212, 170, 0.4);
+        }
+      }
+
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
+        transition: var(--transition);
+        transform: translateX(-50%);
+      }
+
+      &:hover::after{
+        width: 100%;
       }
     }
-
   }
 
   .menu-container{
@@ -46,20 +73,22 @@ export const Container = styled.header`
   }
 
   .menu{
-    width: 2rem;
-    height: 0.2rem;
+    width: 2.5rem;
+    height: 0.3rem;
     background: #FFFF;
     position: relative;
     cursor: pointer;
     display: none;
+    border-radius: 2px;
+    transition: var(--transition);
 
     &:before{
-      bottom: 0.5rem;
-    }
-    &:after{
-      top: 0.5rem;
+      bottom: 0.6rem;
     }
 
+    &:after{
+      top: 0.6rem;
+    }
 
     &.active:before{
       bottom: 0;
@@ -74,7 +103,6 @@ export const Container = styled.header`
     &.active{
       background-color: rgba(0, 0, 0, 0);
     }
-
   }
 
   .menu:before, .menu:after {
@@ -82,12 +110,12 @@ export const Container = styled.header`
     display: block;
     position: absolute;
     width: 100%;
-    height: 0.2rem;
+    height: 0.3rem;
     background: #FFFF;
     cursor: pointer;
-    transition: .6s;
+    transition: var(--transition);
+    border-radius: 2px;
   }
-
 
   input[type=checkbox] {
     height: 0;
@@ -99,55 +127,50 @@ export const Container = styled.header`
   label {
     cursor: pointer;
     text-indent: -9999px;
-    width: 55px;
-    height: 30px;
-    background: var(--green);
+    width: 60px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
     display: block;
     justify-content: center;
     align-items: center;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
     border-radius: 100px;
     position: relative;
     margin-left: auto;
     right: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
   }
 
   @media only screen and (max-width: 800px) {
     label {
-    position: relative;
-   }
+      position: relative;
+    }
   }
 
   label:after {
     content: '';
     background: #FFF;
-    width: 20px;
-    height: 20px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     position: absolute;
-    top: 5px;
+    top: 4px;
     left: 4px;
-   transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+    transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   input:checked + label {
-    background: var(--pink);
+    background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 100%);
   }
 
   input:checked + label:after {
-    left: calc(100% - 5px);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
+    left: calc(100% - 4px);
     transform: translateX(-100%);
   }
 
   @media (max-width: 960px){
-    padding: 1.8rem 3rem;
+    padding: 2rem 3rem;
 
     .menu{
       display: block;
@@ -165,14 +188,15 @@ export const Container = styled.header`
       position: fixed;
       width: 100vw;
       height: 100vh;
-      background: var(--blue);
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0.95) 0%, rgba(74, 144, 226, 0.95) 100%);
+      backdrop-filter: blur(20px);
       top: 0;
       left: 0;
-      transition: opacity 0.25s;
-      background-color: var(--green);
+      transition: var(--transition);
 
       a.button{
-        background-color: var(--pink);
+        background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 100%);
+        box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
       }
 
       &.active{
@@ -181,5 +205,5 @@ export const Container = styled.header`
       }
     }
   }
-  
+
 `
