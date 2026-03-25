@@ -2,7 +2,7 @@ import { Container } from "./styles";
 import emailIcon from "../../assets/email-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg";
 // import { Form } from "../Form/Form";
-import resumePDF from "../../assets/CV_ChauDaVits_Fullstack.pdf"; // Đảm bảo file có trong thư mục assets
+import resumePDF from "../../assets/CV_ChauDaVits_Fullstack_v2.pdf"; // Đảm bảo file có trong thư mục assets
 
 export function Contact() {
   return (
@@ -11,7 +11,7 @@ export function Contact() {
         <h2>Contact</h2>
         <p>Contact me</p>
       </header>
-      
+
       <div className="contacts">
         <div>
           <a href="mailto:davidduongxu1@gmail.com">
@@ -28,7 +28,7 @@ export function Contact() {
       </div>
 
       <h3>Resume</h3>
-      
+
       {/* Hiển thị resume ngay trên trang */}
       <div className="resume-container">
         <embed

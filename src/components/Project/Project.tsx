@@ -1,32 +1,136 @@
 import { Container } from "./styles";
-import githubIcon from "../../assets/github.svg"
+import githubIcon from "../../assets/github.svg";
 // import DownloadApp from '../../assets/download.webp'
-// import externalLink from "../../assets/external-link.svg"
-import ScrollAnimation from "react-animate-on-scroll";
-
-
+import externalLink from "../../assets/external-link.svg";
+import { Fade } from "react-awesome-reveal";
 export function Project() {
   return (
     <Container id="project">
       <h2>My Projects</h2>
       <div className="projects">
-
-        <ScrollAnimation animateIn="flipInX">
+        <Fade>
           <div className="project">
             <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"> <title>Folder</title> <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path> </svg>
+              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <title>Folder</title>
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
               <div className="project-links">
-                <a href="https://github.com/davidchau21/eforum-blog-web" target="_blank" rel="noreferrer">
-                  <img src={githubIcon} alt="Visit site" /></a>
+                <a href="https://github.com/davidchau21/CryptoTracker" target="_blank" rel="noreferrer" title="Source Code">
+                  <img src={githubIcon} alt="Source Code" />
+                </a>
+                <a href="https://crypto-tracker-three-hazel-18.vercel.app" target="_blank" rel="noreferrer" title="Live Demo">
+                  <img src={externalLink} alt="Live Demo" />
+                </a>
+              </div>
+            </header>
+            <div className="body">
+              <h3>CryptoTracker - Cryptocurrency Analytics</h3>
+              <p>
+                A highly responsive CoinMarketCap-styled dashboard engineering real-time cryptocurrency analytics. Integrated directly with the CoinGecko API to fetch live prices, market caps, and trading volumes. The application features interactive charting and seamless filtering for over 100 cryptocurrencies, all orchestrated through a modern tech stack encompassing React.js, TypeScript, Supabase, shadcn-ui, and Tailwind CSS.
+              </p>
+            </div>
+            <footer>
+              <ul className="tech-list">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Supabase</li>
+                <li>Tailwind CSS</li>
+                <li>shadcn-ui</li>
+              </ul>
+            </footer>
+          </div>
+        </Fade>
+
+        <Fade>
+          <div className="project">
+            <header>
+              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <title>Folder</title>
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <div className="project-links">
+                <a href="https://github.com/davidchau21/ta_house" target="_blank" rel="noreferrer" title="Frontend Repo">
+                  <img src={githubIcon} alt="Frontend Repo" />
+                </a>
+                <a href="https://github.com/davidchau21/ta_house_be" target="_blank" rel="noreferrer" title="Backend Repo">
+                  <img src={githubIcon} alt="Backend Repo" />
+                </a>
+                <a href="https://github.com/davidchau21/ta_house_dashboard" target="_blank" rel="noreferrer" title="Admin Dashboard Repo">
+                  <img src={githubIcon} alt="Admin Dashboard Repo" />
+                </a>
+                <a href="https://ta-house.vercel.app" target="_blank" rel="noreferrer" title="Live Demo">
+                  <img src={externalLink} alt="Live Demo" />
+                </a>
+              </div>
+            </header>
+            <div className="body">
+              <h3>TA HOUSE - Smart Lock E-Commerce Platform</h3>
+              <p>
+                A comprehensive e-commerce platform specializing in smart door locks, developed collaboratively by a freelance team. The system integrates an advanced AI-powered customer support chatbot utilizing n8n and RAG architecture to deliver highly accurate, context-aware responses based on trained product knowledge. It features a robust user-facing storefront, a scalable backend, and an intuitive administrative dashboard for streamlined operations.
+              </p>
+            </div>
+            <footer>
+              <ul className="tech-list">
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>n8n</li>
+                <li>RAG AI</li>
+                <li>Vercel</li>
+              </ul>
+            </footer>
+          </div>
+        </Fade>
+
+        <Fade>
+          <div className="project">
+            <header>
+              <svg
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#23ce6b"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                {" "}
+                <title>Folder</title>{" "}
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>{" "}
+              </svg>
+              <div className="project-links">
+                <a
+                  href="https://github.com/davidchau21/eforum-blog-web"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Source Code"
+                >
+                  <img src={githubIcon} alt="Source Code" />
+                </a>
+                <a
+                  href="https://eforum.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Live Demo"
+                >
+                  <img src={externalLink} alt="Live Demo" />
+                </a>
+                <a
+                  href="https://eforum-admin.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Admin Dashboard Demo"
+                >
+                  <img src={externalLink} alt="Admin Dashboard Demo" />
+                </a>
               </div>
             </header>
             <div className="body">
               <h3>EduBlog - Online Learning Forum</h3>
               <p>
-                Developed a full-stack online learning forum using React, Node.js, and MongoDB.
-                EduBlog allows secondary and high school students to discuss, exchange knowledge,
-                write blogs, and interact through real-time chat. The platform features rich-text
-                editing with image uploads, user authentication, and a responsive UI.
+                A comprehensive full-stack e-learning platform empowering students to collaborate, share insights, and publish rich-text blogs. Engineered with real-time WebSocket communication for instant interactions, secure user authentication, and a highly responsive React architecture backed by a robust Node.js and MongoDB foundation.
               </p>
             </div>
             <footer>
@@ -39,14 +143,31 @@ export function Project() {
               </ul>
             </footer>
           </div>
-        </ScrollAnimation>
+        </Fade>
 
-        <ScrollAnimation animateIn="flipInX">
+        <Fade>
           <div className="project">
             <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><title>Folder</title> <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path> </svg>
+              <svg
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#23ce6b "
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <title>Folder</title>{" "}
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>{" "}
+              </svg>
               <div className="project-links">
-                <a href="https://github.com/davidchau21/zalo-web-chat" target="_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/davidchau21/zalo-web-chat"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={githubIcon} alt="Visit site" />
                 </a>
               </div>
@@ -54,10 +175,7 @@ export function Project() {
             <div className="body">
               <h3>Zalo Web Chat - Real-Time Messaging Platform</h3>
               <p>
-                Developed a real-time web chat application inspired by Zalo, using React, Node.js,
-                and WebSockets (Socket.io). The platform allows users to send messages, view online
-                statuses, and see the last active time of their contacts. It features authentication,
-                group chats, and a responsive UI for seamless communication.
+                A high-performance, real-time messaging application mirroring Zalo's core functionalities. Built with Socket.io for instantaneous bi-directional communication, it features live online presence tracking, secure authentication, media sharing, and group chats all orchestrated through a seamless React and Redux frontend.
               </p>
             </div>
             <footer>
@@ -69,19 +187,32 @@ export function Project() {
                 <li>Redux</li>
               </ul>
             </footer>
-
           </div>
-        </ScrollAnimation>
+        </Fade>
 
-        <ScrollAnimation animateIn="flipInX">
+        <Fade>
           <div className="project">
             <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#23ce6b"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <title>Folder</title>
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
               </svg>
               <div className="project-links">
-                <a href="https://github.com/davidchau21/E-Commerce-WebShop" target="\_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/davidchau21/E-Commerce-WebShop"
+                  target="\_blank"
+                  rel="noreferrer"
+                >
                   <img src={githubIcon} alt="Visit site" />
                 </a>
               </div>
@@ -89,9 +220,7 @@ export function Project() {
             <div className="body">
               <h3>E-Commerce WebShop</h3>
               <p>
-                A full-featured e-commerce web application built using Java Spring MVC and JSP, with MySQL as the database and deployed on Apache Tomcat.
-                The platform allows users to browse products, add items to the cart, manage orders, and complete purchases seamlessly.
-                It features a robust admin panel for managing products, users, and order processing.
+                An enterprise-grade e-commerce solution architected with Java Spring MVC and deployed on Apache Tomcat. Engineered to deliver streamlined end-to-end shopping experiences, it features a comprehensive product catalog, secure cart management, scalable order processing, and a robust administrative dashboard for dynamic inventory control.
               </p>
             </div>
             <footer>
@@ -104,14 +233,31 @@ export function Project() {
               </ul>
             </footer>
           </div>
-        </ScrollAnimation>
+        </Fade>
 
-        <ScrollAnimation animateIn="flipInX">
+        <Fade>
           <div className="project">
             <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              <svg
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#23ce6b "
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <title>Folder</title>
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
               <div className="project-links">
-                <a href="https://github.com/davidchau21/HomeSpace-Web-Shop" target="_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/davidchau21/HomeSpace-Web-Shop"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={githubIcon} alt="Visit site" />
                 </a>
               </div>
@@ -119,7 +265,7 @@ export function Project() {
             <div className="body">
               <h3>HomeSpace Web Shop</h3>
               <p>
-                Home Space Web Shop is an e-commerce platform that allows users to browse, search, and purchase a wide range of home appliances. The application provides a user-friendly interface and a secure, efficient shopping experience.
+                A specialized e-commerce platform dedicated to home appliances, maximizing user engagement through intuitive search and seamless navigation. Built with Spring MVC and SQL Server, the application prioritizes a secure, fluid shopping experience with an optimized checkout flow.
               </p>
             </div>
             <footer>
@@ -133,26 +279,40 @@ export function Project() {
               </ul>
             </footer>
           </div>
-        </ScrollAnimation>
+        </Fade>
 
-        <ScrollAnimation animateIn="flipInX">
+        <Fade>
           <div className="project">
             <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#23ce6b"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <title>Code</title>
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
               </svg>
               <div className="project-links">
-                <a href="https://gitlab.com/group4080515/warehouses_management" target="_blank" rel="noreferrer">
+                <a
+                  href="https://gitlab.com/group4080515/warehouses_management"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={githubIcon} alt="Visit site" />
                 </a>
               </div>
             </header>
             <div className="body">
               <h3> Warehouses Management</h3>
-              <p>Designed and implemented a scalable microservice architecture for warehouse management. Developed
-                secure RESTful APIs with JWT for authentication and authorization. Managed service discovery with Eureka Server
-                and API Gateway, and enhanced performance with Redis Cache and rate limiting.</p>
+              <p>
+                A highly scalable microservices architecture designed to orchestrate complex warehouse operations. Secured via JWT-based RESTful APIs and optimized with Redis caching and rate limiting. The infrastructure utilizes Spring Cloud Gateway and Eureka Server to ensure reliable service discovery and resilient inter-service communication.
+              </p>
             </div>
             <footer>
               <ul className="tech-list">
@@ -164,14 +324,31 @@ export function Project() {
               </ul>
             </footer>
           </div>
-        </ScrollAnimation>
+        </Fade>
 
-        <ScrollAnimation animateIn="flipInX">
+        <Fade>
           <div className="project">
             <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              <svg
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#23ce6b "
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <title>Folder</title>
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
               <div className="project-links">
-                <a href="https://github.com/davidchau21/zalo-app-chat" target="_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/davidchau21/zalo-app-chat"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={githubIcon} alt="Visit site" />
                 </a>
               </div>
@@ -179,7 +356,7 @@ export function Project() {
             <div className="body">
               <h3>Zalo App Chat - Real-Time Messaging Platform</h3>
               <p>
-                A mobile chat application inspired by Zalo, developed using React Native for the frontend and Node.js with Express.js for the backend. The app offers real-time messaging capabilities, allowing users to send direct messages, manage friend requests, and participate in group chats. Real-time communication is facilitated through Socket.io, ensuring seamless and instant message delivery. The backend leverages Reactive MongoDB for efficient data handling, and the application is deployed using AWS S3, Firebase Storage, and MongoDB Clusters.
+                A cross-platform mobile messaging application built with React Native and Node.js. Empowered by Socket.io for instantaneous data delivery, it supports direct messaging, friend management, and dynamic group chats. The architecture integrates Reactive MongoDB, AWS S3, and Firebase Storage to ensure highly scalable and efficient media handling.
               </p>
             </div>
             <footer>
@@ -193,7 +370,7 @@ export function Project() {
               </ul>
             </footer>
           </div>
-        </ScrollAnimation>
+        </Fade>
 
         {/* <ScrollAnimation animateIn="flipInX">
           <div className="project">
@@ -341,7 +518,6 @@ export function Project() {
             </footer>
           </div>
         </ScrollAnimation> */}
-
       </div>
     </Container>
   );

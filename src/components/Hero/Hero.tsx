@@ -1,40 +1,42 @@
 import { BrowserRouter } from "react-router-dom";
 import { Container } from "./styles";
-import ScrollAnimation from "react-animate-on-scroll";
+import { Fade, Slide } from "react-awesome-reveal";
 import Illustration from "../../assets/illustration.svg";
-import { NavHashLink } from "react-router-hash-link";
+import { NavHashLink as _NavHashLink } from "react-router-hash-link";
 import linkedin from "../../assets/linkedin.svg";
 import githubIcon from "../../assets/github.svg";
 import whatsapp from "../../assets/whatsapp.svg";
 import Hello from "../../assets/Hello.gif";
 import telegram from "../../assets/telegram.svg";
 
+const NavHashLink = _NavHashLink as any;
+
 export function Hero() {
   return (
     <Container id="home">
       <div className="hero-text">
-        <ScrollAnimation animateIn="fadeInUp">
+        <Fade direction="up" triggerOnce>
           <p>
             Hello <img src={Hello} alt="Hello" width="20px" />, I'm
           </p>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
+        </Fade>
+        <Fade direction="up" delay={200} triggerOnce>
           <h1>Chau Da Vits</h1>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
-          <h3>Backend Developer</h3>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
-          <p className="small-resume">6 Months of Experience</p>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000}>
+        </Fade>
+        <Fade direction="up" delay={400} triggerOnce>
+          <h3>Full-Stack Developer</h3>
+        </Fade>
+        <Fade direction="up" delay={600} triggerOnce>
+          <p className="small-resume">1 Year of Experience</p>
+        </Fade>
+        <Fade direction="up" delay={800} triggerOnce>
           <BrowserRouter>
             <NavHashLink smooth to="#contact" className="button">
               Contact
             </NavHashLink>
           </BrowserRouter>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={1 * 1000}>
+        </Fade>
+        <Fade direction="up" delay={1000} triggerOnce>
           <div className="social-media">
             <a
               href="https://www.linkedin.com/in/david-chau-4a9533201"
@@ -58,12 +60,12 @@ export function Hero() {
               <img src={telegram} alt="Telegram" />
             </a>
           </div>
-        </ScrollAnimation>
+        </Fade>
       </div>
       <div className="hero-image">
-        <ScrollAnimation animateIn="fadeInRight" delay={1 * 1000}>
+        <Slide direction="right" delay={1000} triggerOnce>
           <img src={Illustration} alt="Illustration" />
-        </ScrollAnimation>
+        </Slide>
       </div>
     </Container>
   );
