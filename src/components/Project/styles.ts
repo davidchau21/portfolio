@@ -44,9 +44,9 @@ export const Container = styled.section`
       display: flex;
       flex-direction: column;
       height: 100%;
-      color: #FFF;
+      color: var(--light-gray);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--bg-overlay);
       box-shadow: var(--shadow);
 
       &:hover{
@@ -102,7 +102,7 @@ export const Container = styled.section`
         letter-spacing: 0.12rem;
         margin-bottom: 2rem;
         line-height: 1.6;
-        color: #ccc;
+        color: var(--light-gray);
         flex-grow: 1;
 
         a{
@@ -129,7 +129,7 @@ export const Container = styled.section`
           opacity: 0.8;
 
           li{
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--bg-overlay);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             transition: var(--transition);

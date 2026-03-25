@@ -39,7 +39,7 @@ export function Hero() {
         <Fade direction="up" delay={1000} triggerOnce>
           <div className="social-media">
             <a
-              href="https://www.linkedin.com/in/david-chau-4a9533201"
+              href="https://www.linkedin.com/in/davidchau21"
               target="_blank"
               rel="noreferrer"
             >

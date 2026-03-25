@@ -40,25 +40,50 @@ export const Container = styled.section`
     }
   }
 
-  .contacts{
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+
+  .contact-column, .resume-column {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    place-items: center;
-    margin-top: 1.5rem;
-    margin-bottom: 4rem;
+    width: 100%;
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--bg-overlay);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+    height: 100%;
+  }
 
-    div{
+  .contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+
+    .contact-card{
       display: flex;
       align-items: center;
-      justify-content: center;
-      width: 50%;
+      justify-content: flex-start;
+      width: 100%;
       max-width: 35rem;
       gap: 2rem;
       background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
       border-radius: var(--border-radius);
-      padding: 2rem 3rem;
+      padding: 1.5rem 2rem;
       transition: var(--transition);
       box-shadow: var(--shadow);
       cursor: pointer;
@@ -97,7 +122,7 @@ export const Container = styled.section`
     font-size: 3rem;
     font-weight: 600;
     color: var(--green);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -126,20 +151,20 @@ export const Container = styled.section`
   }
 
   @media(max-width: 960px){
-    .contacts{
-      flex-direction: column;
-      gap: 2rem;
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
 
-      div{
-        width: 100%;
-        padding: 1.5rem 2rem;
-
-        img{
+  @media(max-width: 600px){
+    .contacts {
+      .contact-card {
+        padding: 1.5rem 1.5rem;
+        img {
           width: 4rem;
           height: 4rem;
         }
-
-        a{
+        a {
           font-size: 1.4rem;
         }
       }

@@ -12,12 +12,16 @@ export const GlobalStyle = createGlobalStyle`
     --light-gray: #ecf0f1;
     --dark-bg: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
     --card-bg: rgba(255, 255, 255, 0.05);
+    --bg-overlay: rgba(255, 255, 255, 0.1);
     --border-radius: 12px;
     --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     scroll-padding-top: 10rem;
 
     &.light{
+      --light-gray: #444444;
+      --card-bg: rgba(255, 255, 255, 0.6);
+      --bg-overlay: rgba(0, 0, 0, 0.05);
 
       body{
         transition: 0.5s;
@@ -137,4 +141,4 @@ export const GlobalStyle = createGlobalStyle`
       transform: scale(1.05);
     }
   }
-`
+`;

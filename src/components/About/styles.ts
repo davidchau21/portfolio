@@ -17,7 +17,7 @@ export const Container = styled.section`
     width: 100%;
     margin: 0 auto;
     text-align: left;
-    
+
     h2 {
       display: inline-block;
       margin-bottom: 2rem;
@@ -29,8 +29,8 @@ export const Container = styled.section`
       background-clip: text;
       position: relative;
 
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         position: absolute;
         bottom: -10px;
         left: 0;
@@ -77,7 +77,7 @@ export const Container = styled.section`
     border-radius: var(--border-radius);
     transition: var(--transition);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--bg-overlay);
 
     img {
       width: 4rem;
@@ -89,7 +89,11 @@ export const Container = styled.section`
     &:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow);
-      background: linear-gradient(135deg, rgba(0, 212, 170, 0.1) 0%, rgba(74, 144, 226, 0.1) 100%);
+      background: linear-gradient(
+        135deg,
+        rgba(0, 212, 170, 0.1) 0%,
+        rgba(74, 144, 226, 0.1) 100%
+      );
 
       img {
         transform: scale(1.1);
@@ -99,7 +103,7 @@ export const Container = styled.section`
 
   .experience-section {
     width: 100%;
-    
+
     h2 {
       display: inline-block;
       margin-bottom: 4rem;
@@ -111,8 +115,8 @@ export const Container = styled.section`
       background-clip: text;
       position: relative;
 
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         position: absolute;
         bottom: -10px;
         left: 0;
@@ -125,10 +129,12 @@ export const Container = styled.section`
   }
 
   .experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
     width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .experience-card {
@@ -137,16 +143,15 @@ export const Container = styled.section`
     border-radius: var(--border-radius);
     background: var(--card-bg);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--bg-overlay);
     box-shadow: var(--shadow);
     transition: var(--transition);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 100%;
 
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -155,7 +160,7 @@ export const Container = styled.section`
       background: linear-gradient(to bottom, var(--green), var(--blue));
     }
 
-    &:hover{
+    &:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 40px rgba(0, 212, 170, 0.2);
     }
@@ -167,7 +172,7 @@ export const Container = styled.section`
       font-weight: 700;
       letter-spacing: 0.5px;
     }
-    
+
     .company {
       font-size: 1.6rem;
       color: var(--blue);
@@ -181,7 +186,7 @@ export const Container = styled.section`
       font-style: italic;
       margin-bottom: 2rem;
       display: inline-block;
-      background: rgba(255, 255, 255, 0.05);
+      background: var(--bg-overlay);
       padding: 0.4rem 1rem;
       border-radius: 20px;
     }
@@ -196,7 +201,7 @@ export const Container = styled.section`
       li {
         margin-bottom: 0.8rem;
         list-style-type: disc;
-        
+
         &::marker {
           color: var(--green);
         }
@@ -204,12 +209,12 @@ export const Container = styled.section`
     }
   }
 
-  @media (max-width: 960px){
+  @media (max-width: 960px) {
     .about-text {
       h2 {
-         margin: 0 auto 2rem auto;
-         display: block;
-         width: fit-content;
+        margin: 0 auto 2rem auto;
+        display: block;
+        width: fit-content;
       }
       p {
         text-align: center;
@@ -229,9 +234,6 @@ export const Container = styled.section`
   }
 
   @media only screen and (max-width: 480px) {
-    .experience-grid {
-       grid-template-columns: 1fr;
-    }
     .experience-card {
       padding: 2.5rem;
     }

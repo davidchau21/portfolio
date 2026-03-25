@@ -11,6 +11,7 @@ import CssIcon from "../../assets/css-icon.svg";
 import mysqlIcon from "../../assets/mysql-icon.svg";
 import javaIcon from "../../assets/java-icon.png";
 import springIcon from "../../assets/spring-icon.png";
+import jsIcon from "../../assets/js-icon.svg";
 import { Fade, Slide } from "react-awesome-reveal";
 
 export function About() {
@@ -110,11 +111,46 @@ export function About() {
                 <img src={springIcon} alt="Spring" />
               </Fade>
             </div>
+            <div className="hability">
+              <Fade direction="up" delay={180} triggerOnce>
+                <img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" />
+              </Fade>
+            </div>
+            <div className="hability">
+              <Fade direction="up" delay={180} triggerOnce>
+                <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" />
+              </Fade>
+            </div>
+            <div className="hability">
+              <Fade direction="up" delay={190} triggerOnce>
+                <img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" />
+              </Fade>
+            </div>
+            <div className="hability">
+              <Fade direction="up" delay={190} triggerOnce>
+                <img src="https://skillicons.dev/icons?i=python" alt="Python" />
+              </Fade>
+            </div>
+            <div className="hability">
+              <Fade direction="up" delay={190} triggerOnce>
+                <img src="https://skillicons.dev/icons?i=git" alt="Git" />
+              </Fade>
+            </div>
+            <div className="hability">
+              <Fade direction="up" delay={200} triggerOnce>
+                <img src={jsIcon} alt="JavaScript" />
+              </Fade>
+            </div>
+            <div className="hability">
+              <Fade direction="up" delay={200} triggerOnce>
+                <img src="https://skillicons.dev/icons?i=express" alt="Express.js" />
+              </Fade>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="experience-section">
+      <div className="experience-section" id="experience">
         <Fade direction="up" delay={200} triggerOnce>
           <h2>Experience</h2>
         </Fade>

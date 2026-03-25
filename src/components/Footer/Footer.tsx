@@ -1,10 +1,10 @@
-import { Container } from './styles'
-import reactIcon from '../../assets/react-icon.svg'
-import linkedin from '../../assets/linkedin.svg'
-import githubIcon from '../../assets/github.svg'
+import { Container } from "./styles";
+import reactIcon from "../../assets/react-icon.svg";
+import linkedin from "../../assets/linkedin.svg";
+import githubIcon from "../../assets/github.svg";
 // import whatsapp from '../../assets/whatsapp.svg'
-import telegram from '../../assets/telegram.svg'
-import instagramIcon from '../../assets/instagram.svg'
+import telegram from "../../assets/telegram.svg";
+import instagramIcon from "../../assets/instagram.svg";
 
 export function Footer() {
   return (
@@ -15,13 +15,13 @@ export function Footer() {
       </a> */}
       <div>
         <p>
-          This Website was made with <img src={reactIcon} alt="React" />
+          This Website was made by me <img src={reactIcon} alt="React" />
           {/* <span>❤️</span> */}
         </p>
       </div>
       <div className="social-media">
         <a
-          href="https://www.linkedin.com/in/david-chau-4a9533201"
+          href="https://www.linkedin.com/in/davidchau21"
           target="_blank"
           rel="noreferrer"
         >
@@ -41,11 +41,7 @@ export function Footer() {
         >
           <img src={whatsapp} alt="Whatsapp" />
         </a> */}
-        <a
-          href="https://t.me/davichau21"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://t.me/davichau21" target="_blank" rel="noreferrer">
           <img src={telegram} alt="telegram" />
         </a>
         <a
@@ -57,5 +53,5 @@ export function Footer() {
         </a>
       </div>
     </Container>
-  )
+  );
 }
