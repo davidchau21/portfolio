@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48" fill="none">
+  <defs>
+    <linearGradient id="promptGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA07A" />
+      <stop offset="100%" stop-color="#FF5722" />
+    </linearGradient>
+    <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#FFA500" />
+    </linearGradient>
+  </defs>
+
+  <!-- Prompt Box -->
+  <rect x="10" y="16" width="44" height="34" rx="8" fill="rgba(255, 87, 34, 0.12)" stroke="url(#promptGrad)" stroke-width="2.5" />
+  
+  <!-- Prompt Command Symbol >_ -->
+  <path d="M19 27 L25 33 L19 39" stroke="#FF5722" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="28" y1="39" x2="38" y2="39" stroke="#FFA07A" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Magic Sparkles (Prompt Engineering) -->
+  <path d="M46 8 L48 13 L53 15 L48 17 L46 22 L44 17 L39 15 L44 13 Z" fill="url(#sparkGrad)" />
+  <path d="M49 39 L50 42 L53 43 L50 44 L49 47 L48 44 L45 43 L48 42 Z" fill="#FFD700" />
+</svg>

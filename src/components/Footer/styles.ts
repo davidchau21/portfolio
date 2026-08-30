@@ -1,115 +1,143 @@
 import styled from "styled-components";
 
-
 export const Container = styled.footer`
-  background: linear-gradient(135deg, #1a1a1a 0%, #2b2b2b 100%);
+  background: var(--dark-bg);
   padding: 4rem 15rem;
   margin-top: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border-color);
   position: relative;
+  transition: var(--transition);
 
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent 0%, var(--green) 50%, transparent 100%);
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--blue) 50%,
+      transparent 100%
+    );
+    opacity: 0.3;
   }
 
-  .logo{
-    font-size: 2.8rem;
-    background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .logo {
+    font-size: 2.6rem;
+    color: var(--white);
     font-weight: 700;
+    span {
+      color: var(--blue);
+    }
   }
 
-  p{
-    letter-spacing: 0.2rem;
+  p {
+    letter-spacing: 0.1rem;
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    font-size: 1.6rem;
-    color: var(--light-gray);
+    font-size: 1.5rem;
+    color: var(--gray);
     font-weight: 500;
 
-    img{
-      width: 3rem;
-      height: 3rem;
-      animation: spinning 5s infinite linear;
+    img {
+      width: 2.2rem;
+      height: 2.2rem;
+      animation: spinning 10s infinite linear;
       transition: var(--transition);
+      filter: grayscale(1) opacity(0.6);
 
-      &:hover{
-        transform: scale(1.2);
+      &:hover {
+        transform: scale(1.1);
+        filter: grayscale(0) opacity(1);
       }
     }
   }
 
-  .social-media{
+  .social-media {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
 
-    img, span{
-      font-size: 3rem;
-      width: 3.5rem;
-      height: 3.5rem;
-      transition: var(--transition);
-      filter: grayscale(0.3);
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.8rem;
+      height: 3.8rem;
       border-radius: 50%;
-      padding: 0.5rem;
-      background: var(--card-bg);
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
 
-      &:hover{
-        transform: translateY(-5px) scale(1.1);
-        filter: grayscale(0);
-        box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3);
-        background: linear-gradient(135deg, rgba(0, 212, 170, 0.2) 0%, rgba(74, 144, 226, 0.2) 100%);
+      img {
+        width: 1.8rem;
+        height: 1.8rem;
+        transition: var(--transition);
+        filter: grayscale(1) opacity(0.6);
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+        background: rgba(255, 255, 255, 0.04);
+        border-color: var(--blue);
+
+        img {
+          transform: scale(1.05);
+          filter: grayscale(0) opacity(1);
+        }
       }
     }
   }
 
   @keyframes spinning {
-    0%{
+    0% {
       transform: rotate(0);
     }
-    100%{
+    100% {
       transform: rotate(360deg);
     }
   }
 
-  @media(max-width: 800px){
+  @media (max-width: 1200px) {
+    padding: 4rem 10rem;
+  }
+
+  @media (max-width: 960px) {
+    padding: 4rem 6rem;
+  }
+
+  @media (max-width: 800px) {
     padding: 4rem 5rem;
     flex-direction: column;
     gap: 3rem;
     text-align: center;
   }
 
-  @media(max-width: 600px){
+  @media (max-width: 600px) {
     padding: 4rem 2rem;
 
-    p{
+    p {
       font-size: 1.4rem;
       flex-direction: column;
       gap: 1rem;
     }
 
-    .social-media{
+    .social-media {
       gap: 1rem;
 
-      img, span{
+      img,
+      span {
         width: 3rem;
         height: 3rem;
       }
     }
   }
-`
+`;

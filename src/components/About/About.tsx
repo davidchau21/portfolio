@@ -12,7 +12,74 @@ import mysqlIcon from "../../assets/mysql-icon.svg";
 import javaIcon from "../../assets/java-icon.png";
 import springIcon from "../../assets/spring-icon.png";
 import jsIcon from "../../assets/js-icon.svg";
+import postgresIcon from "../../assets/postgres-icon.svg";
+import ragIcon from "../../assets/rag-icon.svg";
+import aiAgentsIcon from "../../assets/ai-agents.svg";
+import n8nIcon from "../../assets/n8n-icon.svg";
+import promptIcon from "../../assets/prompt-engineering.svg";
+import kafkaIcon from "../../assets/kafka-icon.svg";
+import sagaIcon from "../../assets/saga-outbox.svg";
 import { Fade, Slide } from "react-awesome-reveal";
+
+interface SkillItem {
+  name: string;
+  icon: string;
+}
+
+interface SkillCategory {
+  title: string;
+  skills: SkillItem[];
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    title: "Backend & Architecture",
+    skills: [
+      { name: "NestJS", icon: nestjsIcon },
+      { name: "Node.js", icon: nodeIcon },
+      { name: "Express.js", icon: "https://skillicons.dev/icons?i=express" },
+      { name: "Spring Boot", icon: springIcon },
+      { name: "Apache Kafka", icon: kafkaIcon },
+      { name: "Outbox & Saga", icon: sagaIcon },
+      { name: "Java", icon: javaIcon },
+      { name: "Python", icon: "https://skillicons.dev/icons?i=python" },
+    ],
+  },
+  {
+    title: "Frontend & UI",
+    skills: [
+      { name: "React.js", icon: reactIcon },
+      { name: "Next.js", icon: "https://skillicons.dev/icons?i=nextjs" },
+      { name: "TypeScript", icon: typescriptIcon },
+      { name: "JavaScript", icon: jsIcon },
+      { name: "Tailwind CSS", icon: "https://skillicons.dev/icons?i=tailwind" },
+      { name: "HTML5", icon: htmlIcon },
+      { name: "CSS3", icon: CssIcon },
+    ],
+  },
+  {
+    title: "Databases & Storage",
+    skills: [
+      { name: "PostgreSQL", icon: postgresIcon },
+      { name: "MongoDB", icon: mongoIcon },
+      { name: "MySQL", icon: mysqlIcon },
+      { name: "Redis", icon: redisIcon },
+      { name: "SQL Server", icon: "https://skillicons.dev/icons?i=mysql" },
+    ],
+  },
+  {
+    title: "AI, Workflows & DevOps",
+    skills: [
+      { name: "RAG Architecture", icon: ragIcon },
+      { name: "AI Agents", icon: aiAgentsIcon },
+      { name: "n8n Automation", icon: n8nIcon },
+      { name: "Prompt Engineering", icon: promptIcon },
+      { name: "Docker", icon: dockerIcon },
+      { name: "Git", icon: "https://skillicons.dev/icons?i=git" },
+      { name: "Linux", icon: "https://skillicons.dev/icons?i=linux" },
+    ],
+  },
+];
 
 export function About() {
   return (
@@ -23,176 +90,225 @@ export function About() {
             <h2>About me</h2>
           </Fade>
           <Fade direction="up" delay={100} triggerOnce>
-            <p>
-              Hi there! I'm David Chau, a Fullstack Developer with advanced expertise in Node.js, NestJS, React.js, and Next.js. I specialize in scalable backend systems and responsive frontend interfaces, with a proven ability to design and maintain microservices architectures while optimizing system performance.
+            <p className="bio-lead">
+              Hi there! I'm <strong>David Chau</strong>, a Fullstack Developer
+              with
+              <strong> 2 years of experience</strong> specializing in{" "}
+              <strong>Node.js and NestJS</strong>, with hands-on experience in{" "}
+              <strong>React.js and Next.js</strong>.
             </p>
           </Fade>
-          <Fade
-            direction="up"
-            delay={200}
-            triggerOnce
-            style={{ marginTop: "2rem", marginBottom: "2rem" }}
-          >
+          <Fade direction="up" delay={200} triggerOnce>
             <p>
-              I have demonstrated proficiency in building AI-powered applications, real-time data processing platforms, and enterprise-grade automation workflows. I strive to deliver high-quality code and maintain robust system architectures.
-            </p>
-            <br />
-            <p>
-              Whether it's designing scalable RESTful APIs, optimizing database query performance, or creating engaging user interfaces, I'm passionate about delivering solutions tailored to business needs.
+              Experienced in designing and developing microservices, scalable
+              backend systems, and AI-powered web applications. Skilled in cloud
+              services, third-party integrations, and real-time systems.
             </p>
           </Fade>
           <Fade direction="up" delay={300} triggerOnce>
             <p>
-              If you're looking for a dedicated developer to build, optimize, and
-              scale your web application, let's connect and collaborate!
+              Passionate about building clean, maintainable, and
+              high-performance software with strong architectural foundations.
             </p>
           </Fade>
-          <Fade direction="up" delay={400} triggerOnce>
-            <h3>Here are my main skills:</h3>
+
+          <Fade direction="up" delay={350} triggerOnce>
+            <div className="about-highlights">
+              <div className="highlight-badge">
+                <span className="hl-icon">🎓</span>
+                <span className="hl-text">
+                  IUH (2020 - 2025) • Software Engineering
+                </span>
+              </div>
+              <div className="highlight-badge">
+                <span className="hl-icon">⚡</span>
+                <span className="hl-text">
+                  Microservices, Kafka & Saga Pattern
+                </span>
+              </div>
+              <div className="highlight-badge">
+                <span className="hl-icon">🤖</span>
+                <span className="hl-text">RAG AI Agents & n8n Workflows</span>
+              </div>
+              <div className="highlight-badge">
+                <span className="hl-icon">📍</span>
+                <span className="hl-text">Go Vap District, HCMC</span>
+              </div>
+            </div>
           </Fade>
-          <div className="hard-skills">
-            <div className="hability">
-              <Fade direction="up" delay={100} triggerOnce>
-                <img src={nodeIcon} alt="Node.js" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={120} triggerOnce>
-                <img src={nestjsIcon} alt="NestJS" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={130} triggerOnce>
-                <img src={typescriptIcon} alt="TypeScript" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={140} triggerOnce>
-                <img src={mongoIcon} alt="MongoDB" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={150} triggerOnce>
-                <img src={redisIcon} alt="Redis" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={160} triggerOnce>
-                <img src={dockerIcon} alt="Docker" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={170} triggerOnce>
-                <img src={reactIcon} alt="React" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={170} triggerOnce>
-                <img src={htmlIcon} alt="HTML" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={170} triggerOnce>
-                <img src={CssIcon} alt="CSS" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={170} triggerOnce>
-                <img src={mysqlIcon} alt="MySQL" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={170} triggerOnce>
-                <img src={javaIcon} alt="Java" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={170} triggerOnce>
-                <img src={springIcon} alt="Spring" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={180} triggerOnce>
-                <img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={180} triggerOnce>
-                <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={190} triggerOnce>
-                <img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={190} triggerOnce>
-                <img src="https://skillicons.dev/icons?i=python" alt="Python" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={190} triggerOnce>
-                <img src="https://skillicons.dev/icons?i=git" alt="Git" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={200} triggerOnce>
-                <img src={jsIcon} alt="JavaScript" />
-              </Fade>
-            </div>
-            <div className="hability">
-              <Fade direction="up" delay={200} triggerOnce>
-                <img src="https://skillicons.dev/icons?i=express" alt="Express.js" />
-              </Fade>
-            </div>
+
+          <Fade direction="up" delay={400} triggerOnce>
+            <h3 className="skills-heading">Technical Skills & Technologies</h3>
+          </Fade>
+
+          <div className="skills-container">
+            {skillCategories.map((category, catIdx) => (
+              <div key={category.title} className="skill-category-block">
+                <Fade direction="up" delay={100 + catIdx * 80} triggerOnce>
+                  <h4 className="category-title">{category.title}</h4>
+                  <div className="skills-grid">
+                    {category.skills.map((skill) => (
+                      <div key={skill.name} className="hability">
+                        <img src={skill.icon} alt={skill.name} loading="lazy" />
+                        <span className="skill-label">{skill.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </Fade>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       <div className="experience-section" id="experience">
         <Fade direction="up" delay={200} triggerOnce>
-          <h2>Experience</h2>
+          <h2>Work Experience</h2>
         </Fade>
 
         <div className="experience-grid">
-          <Slide direction="up" delay={300} triggerOnce style={{ height: "100%" }}>
+          <Slide
+            direction="up"
+            delay={300}
+            triggerOnce
+            style={{ height: "100%" }}
+          >
             <div className="experience-card">
-              <h4>Fullstack Developer</h4>
-              <p className="company">Wiintek Corporation</p>
-              <p className="duration">03/2025 - 03/2026</p>
+              <div className="exp-card-header">
+                <div>
+                  <h4>Fullstack Developer</h4>
+                  <p className="company">WIINTEK TECHNOLOGY CORPORATION</p>
+                </div>
+                <span className="duration">01/2025 - 07/2026</span>
+              </div>
               <ul className="description-list">
-                <li>Architected and deployed scalable microservices backend systems using NestJS, handling real-time data processing for distributed cryptocurrency mining nodes.</li>
-                <li>Engineered full-stack Voting and Ticket Support management systems with Node.js backend and React.js frontend.</li>
-                <li>Developed AI-powered chatbots and implemented n8n automation workflows, reducing manual customer support efforts.</li>
-                <li>Built dynamic monitoring dashboards using Next.js and React.js.</li>
+                <li>
+                  Designed and optimized backend services and RESTful APIs using
+                  NestJS, improving database query performance and reducing
+                  response time in real-time systems.
+                </li>
+                <li>
+                  Implemented efficient MongoDB queries, indexing, and schema
+                  design to support high throughput data processing.
+                </li>
+                <li>
+                  Built real-time features using WebSocket for distributed
+                  system communication.
+                </li>
+                <li>
+                  Developed AI-powered chatbot systems using RAG and AI Agents,
+                  integrated with n8n automation workflows to optimize
+                  operational efficiency.
+                </li>
+                <li>
+                  Designed and implemented a microservices-based system for
+                  cryptocurrency mining, handling distributed nodes and
+                  real-time data streams.
+                </li>
               </ul>
+              <div className="tech-tags">
+                <span className="tech-tag">Node.js</span>
+                <span className="tech-tag">NestJS</span>
+                <span className="tech-tag">React.js</span>
+                <span className="tech-tag">Next.js</span>
+                <span className="tech-tag">TypeScript</span>
+                <span className="tech-tag">MongoDB</span>
+                <span className="tech-tag">WebSocket</span>
+                <span className="tech-tag">Kafka</span>
+                <span className="tech-tag">Outbox / Saga</span>
+                <span className="tech-tag">n8n</span>
+                <span className="tech-tag">RAG</span>
+                <span className="tech-tag">AI Agents</span>
+              </div>
             </div>
           </Slide>
 
-          <Slide direction="up" delay={400} triggerOnce style={{ height: "100%" }}>
+          <Slide
+            direction="up"
+            delay={400}
+            triggerOnce
+            style={{ height: "100%" }}
+          >
             <div className="experience-card">
-              <h4>Fullstack Developer (Team Project)</h4>
-              <p className="company">TA HOUSE</p>
-              <p className="duration">Freelance</p>
+              <div className="exp-card-header">
+                <div>
+                  <h4>Fullstack Developer (Freelance / Team Project)</h4>
+                  <p className="company">TA HOUSE</p>
+                </div>
+                <span className="duration">Freelance</span>
+              </div>
               <ul className="description-list">
-                <li>Collaborated within a freelance team to develop a comprehensive e-commerce platform specializing in smart door locks, ensuring a seamless and secure shopping experience.</li>
-                <li>Integrated an advanced AI-powered customer support chatbot utilizing n8n and RAG (Retrieval-Augmented Generation) architecture to deliver highly accurate, context-aware responses based on trained product knowledge.</li>
+                <li>
+                  Collaborated within a freelance team to develop a
+                  comprehensive e-commerce platform specializing in smart door
+                  locks, ensuring a seamless and secure shopping experience.
+                </li>
+                <li>
+                  Integrated an advanced AI-powered customer support chatbot
+                  utilizing n8n and RAG (Retrieval-Augmented Generation)
+                  architecture to deliver highly accurate, context-aware
+                  responses based on trained product knowledge.
+                </li>
+                <li>
+                  Built user-friendly storefront, administrative management
+                  dashboard, and secure RESTful backend APIs.
+                </li>
               </ul>
+              <div className="tech-tags">
+                <span className="tech-tag">React.js</span>
+                <span className="tech-tag">Node.js</span>
+                <span className="tech-tag">n8n Automation</span>
+                <span className="tech-tag">RAG Architecture</span>
+                <span className="tech-tag">AI Chatbot</span>
+                <span className="tech-tag">Tailwind CSS</span>
+                <span className="tech-tag">RESTful API</span>
+              </div>
             </div>
           </Slide>
 
-          <Slide direction="up" delay={500} triggerOnce style={{ height: "100%" }}>
+          <Slide
+            direction="up"
+            delay={500}
+            triggerOnce
+            style={{ height: "100%" }}
+          >
             <div className="experience-card">
-              <h4>Backend Nodejs Intern</h4>
-              <p className="company">MangoAds Co. LTD</p>
-              <p className="duration">08/2024 - 01/2025</p>
+              <div className="exp-card-header">
+                <div>
+                  <h4>Backend Developer Intern</h4>
+                  <p className="company">
+                    MANGO COMMUNICATIONS AND ADVERTISING COMPANY LIMITED
+                  </p>
+                </div>
+                <span className="duration">08/2024 - 01/2025</span>
+              </div>
               <ul className="description-list">
-                <li>Designed and implemented RESTful APIs aligned with business requirements, emphasizing reliability across production systems.</li>
-                <li>Diagnosed and resolved critical post-deployment bugs, ensuring system stability and minimal downtime.</li>
-                <li>Optimized API performance through legacy codebase refactoring and MongoDB query optimization.</li>
-                <li>Acquired hands-on expertise with Docker containerization and deployment automation.</li>
+                <li>
+                  Designed and implemented RESTful APIs aligned with business
+                  requirements, ensuring reliability and maintainability in
+                  production environments.
+                </li>
+                <li>
+                  Diagnosed and resolved post-deployment issues, improving
+                  system stability and reducing downtime.
+                </li>
+                <li>
+                  Refactored legacy codebase and optimized MongoDB queries to
+                  improve API performance and reduce response time.
+                </li>
+                <li>
+                  Utilized Docker for containerization and deployment, enhancing
+                  development and deployment consistency.
+                </li>
               </ul>
+              <div className="tech-tags">
+                <span className="tech-tag">Node.js</span>
+                <span className="tech-tag">NestJS</span>
+                <span className="tech-tag">MongoDB</span>
+                <span className="tech-tag">Docker</span>
+                <span className="tech-tag">RESTful API</span>
+                <span className="tech-tag">Handlebars</span>
+              </div>
             </div>
           </Slide>
         </div>

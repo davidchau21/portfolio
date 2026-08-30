@@ -1,5 +1,5 @@
 import React from "react";
-// import { useEffect } from 'react'
+import { BrowserRouter } from "react-router-dom";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Main } from "./components/Main/Main";
@@ -11,13 +11,13 @@ const GlobalStyle = _GlobalStyle as any;
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyle></GlobalStyle>
       <Header></Header>
       <Main></Main>
       <Analytics />
       <Footer></Footer>
-    </>
+    </BrowserRouter>
   );
 }
 

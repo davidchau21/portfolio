@@ -4,9 +4,10 @@ import styled from "styled-components";
 export const Container = styled.main`
   position: relative;
   z-index: 0;
-  padding: 0 10rem;
+  padding: 0 15rem;
   overflow-x: hidden;
   min-height: 100vh;
+  transition: var(--transition);
 
   #tsparticles{
     position: fixed;
@@ -19,7 +20,7 @@ export const Container = styled.main`
   }
 
   @media (max-width: 1200px){
-    padding: 0 8rem;
+    padding: 0 10rem;
   }
 
   @media (max-width: 960px){
@@ -35,10 +36,6 @@ export const Container = styled.main`
   }
 
   @media(max-width: 480px){
-    padding: 0 1rem;
-  }
-
-  @media(max-width: 360px){
-    padding: 0 0.5rem;
+    padding: 0 1.5rem;
   }
 `

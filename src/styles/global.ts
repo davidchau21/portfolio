@@ -2,30 +2,42 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   :root{
-    --pink: #ff6b9d;
-    --black: #1a1a1a;
-    --green: #00d4aa;
-    --blue: #4a90e2;
-    --purple: #9b59b6;
-    --orange: #f39c12;
-    --gray: #34495e;
-    --light-gray: #ecf0f1;
-    --dark-bg: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --bg-overlay: rgba(255, 255, 255, 0.1);
-    --border-radius: 12px;
-    --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --pink: #ff007f;
+    --black: #06070a;
+    --green: #00ff87;
+    --blue: #00f2fe;
+    --purple: #7928ca;
+    --orange: #ff9f43;
+    --gray: #718096;
+    --light-gray: #a0aec0;
+    --dark-bg: radial-gradient(circle at 50% 0%, #0d0f1a 0%, #07080d 100%);
+    --card-bg: rgba(13, 16, 27, 0.45);
+    --bg-overlay: rgba(255, 255, 255, 0.03);
+    --border-radius: 16px;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --white: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --button-text: var(--black);
+    --hollow-bg: var(--black);
     scroll-padding-top: 10rem;
 
     &.light{
-      --light-gray: #444444;
-      --card-bg: rgba(255, 255, 255, 0.6);
-      --bg-overlay: rgba(0, 0, 0, 0.05);
+      --light-gray: #4a5568;
+      --card-bg: rgba(255, 255, 255, 0.7);
+      --bg-overlay: rgba(0, 0, 0, 0.03);
+      --white: var(--black);
+      --border-color: rgba(0, 0, 0, 0.1);
+      --green: #00aa56;
+      --blue: #0076a3;
+      --pink: #d9006c;
+      --purple: #5b10a3;
+      --button-text: #ffffff;
+      --hollow-bg: #f5f7fa;
 
       body{
         transition: 0.5s;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4ecf7 100%);
         color: var(--black);
       }
 
@@ -35,9 +47,10 @@ export const GlobalStyle = createGlobalStyle`
 
       header.header-fixed{
         transition: 0.5s;
-        background-color: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        box-shadow: var(--shadow);
+        background-color: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         a{
           transition: 0.5s;
           color: var(--black);
@@ -52,20 +65,22 @@ export const GlobalStyle = createGlobalStyle`
 
       footer.footer{
         transition: 0.5s;
-        background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(200,200,200,0.9) 100%);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(20px);
         color: var(--black);
-        box-shadow: var(--shadow);
+        box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.05);
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
       }
 
       form{
         input,textarea{
           transition: 0.5s;
-          border: solid 1px var(--black);
+          border: solid 1px rgba(0, 0, 0, 0.15);
           color: var(--black);
+          background: rgba(255, 255, 255, 0.5);
           &::placeholder{
             transition: 0.5s;
-            color: var(--black);
+            color: #718096;
           }
         }
       }
@@ -88,6 +103,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   body{
@@ -96,11 +112,16 @@ export const GlobalStyle = createGlobalStyle`
     background: var(--dark-bg);
     color: #FFFF;
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   body, input, textarea, button{
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6, .logo {
+    font-family: 'Sora', sans-serif;
   }
 
   a{
@@ -111,25 +132,37 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
     cursor: pointer;
     background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
-    color: #FFFF;
+    color: var(--button-text);
     border-radius: var(--border-radius);
-    font-weight: 500;
+    font-weight: 600;
     transition: var(--transition);
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
     &:hover{
       transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(0, 212, 170, 0.4);
+      box-shadow: 0 8px 25px rgba(0, 255, 135, 0.4);
+      filter: brightness(1.05);
+    }
+    
+    &:active {
+      transform: translateY(0);
     }
   }
 
   button:disabled, .button:disabled{
-    filter: brightness(0.8);
+    filter: brightness(0.6) grayscale(0.5);
     cursor: not-allowed;
+    box-shadow: none;
   }
 
-
   .logo{
-    font-size: 3rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 2.4rem;
     color: #FFFF;
     font-weight: 700;
     background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
@@ -137,8 +170,37 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     transition: var(--transition);
-    &:hover{
-      transform: scale(1.05);
+    white-space: nowrap;
+
+    .logo-bracket {
+      color: var(--green);
+      -webkit-text-fill-color: var(--green);
+      font-weight: 800;
     }
+
+    &:hover{
+      transform: scale(1.04);
+      filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.4));
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.9rem;
+    }
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #07080d;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--blue) 0%, var(--green) 100%);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--green);
   }
 `;

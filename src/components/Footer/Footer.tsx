@@ -2,52 +2,51 @@ import { Container } from "./styles";
 import reactIcon from "../../assets/react-icon.svg";
 import linkedin from "../../assets/linkedin.svg";
 import githubIcon from "../../assets/github.svg";
-// import whatsapp from '../../assets/whatsapp.svg'
 import telegram from "../../assets/telegram.svg";
 import instagramIcon from "../../assets/instagram.svg";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <Container className="footer">
-      {/* <a href="https://vinayaksingh.in" className="logo">
-        <span>www.vinayak</span>
-        <span>singh.in</span>
-      </a> */}
-      <div>
+      <div className="footer-copyright">
         <p>
-          This Website was made by me <img src={reactIcon} alt="React" />
-          {/* <span>❤️</span> */}
+          Designed & Built with <img src={reactIcon} alt="React" width="16" height="16" /> by{" "}
+          <strong>David Chau</strong> • © {currentYear}
         </p>
       </div>
+
       <div className="social-media">
         <a
           href="https://www.linkedin.com/in/davidchau21"
           target="_blank"
           rel="noreferrer"
+          title="LinkedIn"
         >
-          <img src={linkedin} alt="Linkedin" />
+          <img src={linkedin} alt="LinkedIn" />
         </a>
         <a
           href="https://github.com/davidchau21"
           target="_blank"
           rel="noreferrer"
+          title="GitHub"
         >
           <img src={githubIcon} alt="GitHub" />
         </a>
-        {/* <a
-          href="https://api.whatsapp.com/send/?phone=%2B919630576848&text=Hello+Vinayak"
+        <a
+          href="https://t.me/davidchau21"
           target="_blank"
           rel="noreferrer"
+          title="Telegram"
         >
-          <img src={whatsapp} alt="Whatsapp" />
-        </a> */}
-        <a href="https://t.me/davichau21" target="_blank" rel="noreferrer">
-          <img src={telegram} alt="telegram" />
+          <img src={telegram} alt="Telegram" />
         </a>
         <a
           href="https://www.instagram.com/chdavid.xv"
           target="_blank"
           rel="noreferrer"
+          title="Instagram"
         >
           <img src={instagramIcon} alt="Instagram" />
         </a>
