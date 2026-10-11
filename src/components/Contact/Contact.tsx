@@ -3,7 +3,7 @@ import emailIcon from "../../assets/email-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg";
 import telegram from "../../assets/telegram.svg";
 import { Form } from "../Form/Form";
-import resumePDF from "../../assets/CV_ChauDaVits_Fullstack_v3.pdf";
+import resumePDF from "../../assets/CV_ChauDaVits_FS.pdf";
 import { Fade } from "react-awesome-reveal";
 
 export function Contact() {
@@ -13,7 +13,8 @@ export function Contact() {
         <Fade direction="up" triggerOnce>
           <h2>Get In Touch</h2>
           <p className="contact-lead">
-            Have a project in mind, fulltime role, or looking to collaborate? Feel free to reach out!
+            Have a project in mind, fulltime role, or looking to collaborate?
+            Feel free to reach out!
           </p>
         </Fade>
       </header>
@@ -76,7 +77,9 @@ export function Contact() {
                 </div>
                 <div className="card-info">
                   <span className="info-label">Location</span>
-                  <span className="info-value">Go Vap District, HCMC, Vietnam</span>
+                  <span className="info-value">
+                    Go Vap District, HCMC, Vietnam
+                  </span>
                 </div>
               </div>
             </div>
@@ -87,7 +90,8 @@ export function Contact() {
           <div className="resume-column">
             <h3>Curriculum Vitae</h3>
             <p className="resume-desc">
-              Get an in-depth breakdown of my technical experience, system architectures, production projects, and education.
+              Get an in-depth breakdown of my technical experience, system
+              architectures, production projects, and education.
             </p>
             <div className="resume-actions">
               <a
@@ -100,10 +104,10 @@ export function Contact() {
               </a>
               <a
                 href={resumePDF}
-                download="CV_ChauDaVits_Fullstack_v3.pdf"
+                download="CV_ChauDaVits_FS.pdf"
                 className="button resume-btn secondary"
               >
-                Download PDF (v3) 📥
+                Download PDF 📥
               </a>
             </div>
           </div>

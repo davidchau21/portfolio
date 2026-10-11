@@ -176,10 +176,51 @@ export function About() {
             <div className="experience-card">
               <div className="exp-card-header">
                 <div>
+                  <h4>Backend Developer</h4>
+                  <p className="company">HALOTIMES MEDIA LIMITED COMPANY</p>
+                </div>
+                <span className="duration">04/2026 - Present</span>
+              </div>
+              <ul className="description-list">
+                <li>
+                  Developed a social networking platform with posts, gifting,
+                  events, rewards, and a point-based marketplace.
+                </li>
+                <li>
+                  Implemented marketplace and gamification logic, including
+                  dynamic pricing, product contribution, point accumulation, and
+                  reward badges.
+                </li>
+                <li>
+                  Developed RESTful APIs and Web/Admin Web using Node.js/NestJS
+                  for users, products, tasks, transactions, and platform
+                  management.
+                </li>
+              </ul>
+              <div className="tech-tags">
+                <span className="tech-tag">Node.js</span>
+                <span className="tech-tag">React.js</span>
+                <span className="tech-tag">TypeScript</span>
+                <span className="tech-tag">MongoDB</span>
+                <span className="tech-tag">Kafka</span>
+                <span className="tech-tag">Redis</span>
+              </div>
+            </div>
+          </Slide>
+
+          <Slide
+            direction="up"
+            delay={400}
+            triggerOnce
+            style={{ height: "100%" }}
+          >
+            <div className="experience-card">
+              <div className="exp-card-header">
+                <div>
                   <h4>Fullstack Developer</h4>
                   <p className="company">WIINTEK TECHNOLOGY CORPORATION</p>
                 </div>
-                <span className="duration">01/2025 - 07/2026</span>
+                <span className="duration">01/2025 - 04/2026</span>
               </div>
               <ul className="description-list">
                 <li>
@@ -214,54 +255,9 @@ export function About() {
                 <span className="tech-tag">TypeScript</span>
                 <span className="tech-tag">MongoDB</span>
                 <span className="tech-tag">WebSocket</span>
-                <span className="tech-tag">Kafka</span>
-                <span className="tech-tag">Outbox / Saga</span>
                 <span className="tech-tag">n8n</span>
                 <span className="tech-tag">RAG</span>
                 <span className="tech-tag">AI Agents</span>
-              </div>
-            </div>
-          </Slide>
-
-          <Slide
-            direction="up"
-            delay={400}
-            triggerOnce
-            style={{ height: "100%" }}
-          >
-            <div className="experience-card">
-              <div className="exp-card-header">
-                <div>
-                  <h4>Fullstack Developer (Freelance / Team Project)</h4>
-                  <p className="company">TA HOUSE</p>
-                </div>
-                <span className="duration">Freelance</span>
-              </div>
-              <ul className="description-list">
-                <li>
-                  Collaborated within a freelance team to develop a
-                  comprehensive e-commerce platform specializing in smart door
-                  locks, ensuring a seamless and secure shopping experience.
-                </li>
-                <li>
-                  Integrated an advanced AI-powered customer support chatbot
-                  utilizing n8n and RAG (Retrieval-Augmented Generation)
-                  architecture to deliver highly accurate, context-aware
-                  responses based on trained product knowledge.
-                </li>
-                <li>
-                  Built user-friendly storefront, administrative management
-                  dashboard, and secure RESTful backend APIs.
-                </li>
-              </ul>
-              <div className="tech-tags">
-                <span className="tech-tag">React.js</span>
-                <span className="tech-tag">Node.js</span>
-                <span className="tech-tag">n8n Automation</span>
-                <span className="tech-tag">RAG Architecture</span>
-                <span className="tech-tag">AI Chatbot</span>
-                <span className="tech-tag">Tailwind CSS</span>
-                <span className="tech-tag">RESTful API</span>
               </div>
             </div>
           </Slide>
@@ -284,21 +280,12 @@ export function About() {
               </div>
               <ul className="description-list">
                 <li>
-                  Designed and implemented RESTful APIs aligned with business
-                  requirements, ensuring reliability and maintainability in
-                  production environments.
+                  Developed and maintained RESTful APIs using Node.js/NestJS and
+                  optimized MongoDB queries.
                 </li>
                 <li>
-                  Diagnosed and resolved post-deployment issues, improving
-                  system stability and reducing downtime.
-                </li>
-                <li>
-                  Refactored legacy codebase and optimized MongoDB queries to
-                  improve API performance and reduce response time.
-                </li>
-                <li>
-                  Utilized Docker for containerization and deployment, enhancing
-                  development and deployment consistency.
+                  Refactored legacy code, fixed production issues, and used
+                  Docker for development/deployment.
                 </li>
               </ul>
               <div className="tech-tags">

@@ -4,7 +4,7 @@ import {
   HashLink as _HashLink,
 } from "react-router-hash-link";
 import { useState, useEffect } from "react";
-import Resume from "../../assets/CV_ChauDaVits_Fullstack_v3.pdf";
+import Resume from "../../assets/CV_ChauDaVits_FS.pdf";
 
 const NavHashLink = _NavHashLink as any;
 const HashLink = _HashLink as any;
